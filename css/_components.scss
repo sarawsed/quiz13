@@ -1,0 +1,87 @@
+.menu {
+  padding: 50px 0;
+  background-color: $first_color;
+  .ourmenu {
+    font-family: $font_family;
+    font-size: $font_size * 4;
+    color: $text_titr;
+    @media (max-width: 768px) {
+      font-size: $font_size * 3;
+    }
+  }
+  .button-container {
+    padding: $spacing * 4;
+    gap: $spacing * 3;
+  }
+  .menu-list {
+    padding: 0 $spacing * 16;
+    margin: $spacing * 4 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $spacing * 8;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 1rem;
+    }
+    .food-item {
+      width: 100%;
+      display: grid;
+      grid-template-columns: calc(250px - 1rem) calc(100% - 250px);
+      grid-gap: $spacing * 4;
+      @media screen and (max-width: 576px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      & > img {
+        width: 150px;
+        object-fit: contain;
+        height: 150px;
+        border-radius: $radius;
+        @media screen and (max-width: 992px) {
+          width: 100%;
+        }
+      }
+      .food-detail {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $text_titr;
+        padding-bottom: $spacing * 2;
+        margin-bottom: $spacing * 4;
+        letter-spacing: 1px;
+        font-weight: bold;
+        font-size: $font_size;
+        .price {
+          color: $text_titr;
+        }
+      }
+      .food-more {
+        color: $text_secondary;
+      }
+    }
+  }
+}
+.btn {
+  padding: $spacing $spacing * 4;
+  text-transform: capitalize;
+  width: 120px;
+  border-radius: $radius;
+  border-color: $primary_color;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: $primary_color;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $primary_color;
+    color: $text_color;
+  }
+  @media screen and (max-width: 768px) {
+    flex-grow: 1;
+  }
+}
+.active-btn {
+  background-color: $button-text;
+  color: $primary_color;
+}

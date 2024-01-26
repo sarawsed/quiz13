@@ -1,0 +1,129 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu {
+  padding: 50px 0;
+  background-color: #F6FFDE;
+}
+.menu .ourmenu {
+  font-family: "poppins";
+  font-size: 64px;
+  color: #D14D72;
+}
+@media (max-width: 768px) {
+  .menu .ourmenu {
+    font-size: 48px;
+  }
+}
+.menu .button-container {
+  padding: 1rem;
+  gap: 0.75rem;
+}
+.menu .menu-list {
+  padding: 0 4rem;
+  margin: 1rem 0;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .menu .menu-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .menu .menu-list {
+    padding: 0 1rem;
+  }
+}
+.menu .menu-list .food-item {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(250px - 1rem) calc(100% - 250px);
+  grid-gap: 1rem;
+}
+@media screen and (max-width: 576px) {
+  .menu .menu-list .food-item {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menu .menu-list .food-item > img {
+  width: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 150px;
+  border-radius: 0.5rem;
+}
+@media screen and (max-width: 992px) {
+  .menu .menu-list .food-item > img {
+    width: 100%;
+  }
+}
+.menu .menu-list .food-item .food-detail {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #D14D72;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.menu .menu-list .food-item .food-detail .price {
+  color: #D14D72;
+}
+.menu .menu-list .food-item .food-more {
+  color: #010911;
+}
+
+.btn {
+  padding: 0.25rem 1rem;
+  text-transform: capitalize;
+  width: 120px;
+  border-radius: 0.5rem;
+  border-color: #B2A4FF;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: #B2A4FF;
+  transition: 0.4s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #B2A4FF;
+  color: #D3DEDC;
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    flex-grow: 1;
+  }
+}
+
+.active-btn {
+  background-color: #BA94D1;
+  color: #B2A4FF;
+}
